@@ -1,0 +1,210 @@
+1 Month
+*******
+
+1) variables
+
+       
+   
+2) functions
+
+
+
+3) Arrays
+
+
+
+4) JSON
+
+     
+
+5) Promises
+
+
+6) DOM Manipulations
+
+
+
+7) CallBacks
+
+
+
+8) Events Handling
+
+
+
+9) Event Bubbling & Event Capturing
+
+
+
+10) Debouncing
+
+
+
+11) Throttling
+
+
+
+12) AJAX Calls
+
+   
+
+13) Regular Expressions
+
+
+
+14) Closures
+
+
+Introduction
+************
+        - JavaScript is the Scripting Language.
+
+        - JavaScript Released by Netscape.
+
+        - Current Version of JavaScript is ES13.
+
+        - ES Stands for ECMA Script.
+
+        - JavaScript used to build the following applications.
+
+                1) Angular
+
+                2) React
+
+                3) NodeJS
+
+                4) VueJS
+
+                5) Dynamic Web Pages
+
+        - we will save the JavaScript files with ".js" extension.
+
+        - we will include JavaScript to webpages by using <script> tag.
+
+        Ex.
+                <html>
+                    <head>
+                        <script>
+                            //JavaScript
+                        </script>
+                    </head>
+                </html>
+
+        - we can execute JavaScript in two ways.
+
+            1) node tool
+
+                    NodeJS
+
+            2) intrepreter
+
+                    Browsers
+
+        - JavaScript execution is Synchronous execution.
+
+        - JavaScript is the Object Based Scripting Language.
+
+            Ex.
+                    window
+
+                    document
+
+                    console
+
+                    Date
+
+                    ---
+                    ---
+                    ---
+
+Software Installation
+*********************
+
+1) download and install NodeJS
+
+    website : https://nodejs.org/en/download/
+
+    file    : node-v14.18.1-x64.msi
+
+
+2) download and install Visual Studio Code
+
+    website : https://code.visualstudio.com/docs/?dv=win
+
+    file    : VSCodeUserSetup-x64-1.61.0.exe
+
+
+execution of JavaScript
+***********************
+
+Ex.
+    demo.js
+
+    > node demo.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
