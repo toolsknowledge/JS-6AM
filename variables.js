@@ -84,3 +84,47 @@ console.log( arr );
 arr.shift();
 console.log( arr );                     //[ 2, 3, 4, 500 ]
 
+
+
+
+
+const obj = {
+    "sub_one":"Angular12",
+    "sub_two":"NodeJS",
+    "sub_three":"MongoDB"
+};
+//obj={};                             //TypeError: Assignment to constant variable.
+
+
+obj.sub_one = "Angular13";
+obj.sub_two = "Deno";
+obj.sub_three = "CassandraDB";
+console.log(obj);                   //{ sub_one: 'Angular13', sub_two: 'Deno', sub_three: 'CassandraDB' }
+
+
+
+var data = Symbol( 100 );
+console.log( data );
+
+console.log( typeof data );             //symbol
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
