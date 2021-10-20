@@ -20,6 +20,7 @@
 </script>
 -->
 
+<!--
 <script>
     function fun_one(arg1,arg2,arg3){
         console.log( arg1, arg2, arg3 );
@@ -30,6 +31,209 @@
     fun_one(undefined,"Hello_2");                           //undefined 'Hello_2' undefined
     fun_one(null,null,null);                                //null null null
 </script>
+-->
+
+
+<!--
+<script>
+    function fun_one(){
+        return fun_two;
+    }
+
+    function fun_two(){
+        return "Hello";
+    }
+
+    console.log( fun_one()() );                 //Hello
+
+</script>
+-->
+
+
+<!--
+<script>
+    let arr = [];
+
+    function fun_one(){
+        return "Hello";
+    }
+
+    for(let i=0;i<5;i++){
+        arr.push( fun_one() );
+    }
+
+    for(let j=0;j<arr.length;j++){
+        console.log( arr[j] );
+    }
+   
+</script>
+-->
+
+
+<!-- <script>
+    let arr = [];
+
+    function fun_one(){
+        return "Hello";
+    }
+
+    for(let i=0;i<5;i++){
+        arr.push( fun_one );
+    }
+
+    for(let j=0;j<arr.length;j++){
+        console.log( arr[j]() );
+    }
+</script>
+ -->
+
+
+
+ <!--
+<script>
+    function fun_one(){
+        return "Hello";
+    }
+
+    setTimeout(function(){
+        console.log( fun_one() );
+    },5000);                //Hello
+
+</script>
+-->
+
+<!--
+<script>
+    function fun_one(){
+        return "Hello";
+    };
+
+    setInterval(function(){
+        console.log( fun_one() );
+    },2000);
+</script>
+-->
+
+
+<!--
+<script>
+    for(let i=0;i<5;i++){
+        setTimeout(function(){
+            console.log(i);
+        },5000);
+    }
+
+    //var : 5 5 5 5 5 
+    //let : 0 1 2 3 4 
+</script>
+-->
+
+
+<!--
+    Rest Parameters in Functions
+
+
+    1) we can take only one spread operator per function
+
+    2) position of spread operator always last in occurances
+-->
+
+<!--
+<script>
+    function fun_one(...arg1){
+        console.log( arg1 );
+    };
+    fun_one("Hello_1","Hello_2");           //['Hello_1', 'Hello_2']
+    fun_one("Hello_1","Hello_2","Hello_3"); //['Hello_1', 'Hello_2', 'Hello_3']
+    fun_one();                              //[]
+    fun_one(undefined);                     //[undefined]
+    fun_one(undefined,null);                //[undefined, null]
+</script>
+-->
+
+<!--
+<script>
+    function fun_one(...arg1,...arg2){
+
+    }
+</script>
+-->
+
+<script>
+    function fun_one(arg2,...arg1){}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
