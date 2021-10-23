@@ -315,24 +315,141 @@
 </script>
 -->
 
-
+<!--
 <script>
     let initilize = (user,getElementsByEmail,getElementsById)=>{
-        console.log(user, getElementsByEmail(), getElementsById() );              
+        console.log(user,getElementsByEmail(),getElementsById());
     };
 
-
     let getElementsByEmail = ()=>{
-        return "hr@ashokit.in";
+        return "Hello_2";
     }
 
     let getElementsById = ()=>{
-        return "AshokIT";
+        return "Hello_3";
     };
 
-    initilize("Hello_1",getElementsByEmail,getElementsById);                //Hello_1 hr@ashokit.in AshokIT
-
+    initilize("Hello_1",getElementsByEmail,getElementsById);                    //Hello_1 Hello_2 Hello_3
 </script>
+-->
+
+
+<!--
+<script>
+    let arr = [];
+    for(let i=0;i<5;i++){
+        arr.push( ()=>{ return "Hello"} );
+    }
+
+    for(let j=0;j<arr.length;j++){
+        console.log( arr[j]() );
+    }
+</script>
+-->
+
+<!--
+    IIFE
+    ****
+        Immidiate Invokable Functional Expression
+
+        ES9
+
+        these functions called as self invokable functions
+
+        Syntax
+        ******
+        ((arg1,arg2,arg3,.....arg n)=>{
+            business logic
+        })(param1, param2,param3,....param n);
+--> 
+
+<!--
+<script>
+    (()=>{
+        console.log("welcome to IIFE");
+    })();                //welcome to IIFE
+</script>
+-->
+
+<!--
+<script>
+    let msg = (()=>{
+        return "welcome to iife";
+    })();
+    console.log(msg);               //welcome to iife
+</script>
+-->
+
+<!--
+<script>
+    function fun_one(arg1,arg2,arg3){
+        console.log(arg1,arg2,arg3);
+    };
+
+    fun_one( (()=>{ return "Hello_1"})(),
+            (()=>{ return "Hello_2"})(),
+            (()=>{ return "Hello_3"})() );              //Hello_1 Hello_2 Hello_3
+</script>
+-->
+
+
+<!--
+<script>
+    ((arg1,arg2,arg3)=>{
+        console.log( arg1, arg2, arg3 );
+    })("Hello_1","Hello_2","Hello_3");                  //Hello_1 Hello_2 Hello_3
+</script>
+-->
+
+<!--
+<script>
+   for(var i=0;i<5;i++){
+       ((i)=>{
+        setTimeout(()=>{
+                console.log(i);
+        },5000)
+       })(i);
+   }
+</script>
+-->
+
+<!-- constructor functions -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
