@@ -413,7 +413,349 @@
 </script>
 -->
 
-<!-- constructor functions -->
+<!-- constructor functions 
+
+    - constructor functions used to create the "classes" like "structures" before "ES6".
+
+    - in constructor functions(variables and functions) should start with "this" keyword.
+
+    - this keyword representing the "current" class members.
+
+    - we will create the object with the help of "new" keyword.
+-->
+
+
+<!--
+<script>
+   function class_one(){
+        this.sub_one = "Angular13";
+        this.sub_two = "NodeJS";
+        this.sub_three = "MongoDB";
+   };
+   let obj1 = new class_one();
+   console.log(
+       obj1.sub_one,
+       obj1.sub_two,
+       obj1.sub_three
+   );                           //Angular13 NodeJS MongoDB
+
+
+   let obj2 = new class_one();
+   console.log(
+    obj2.sub_one,
+    obj2.sub_two,
+    obj2.sub_three
+   );                           //Angular13 NodeJS MongoDB
+</script>
+-->
+
+
+<!--
+<script>
+    function class_one(){
+        this.wish = "JavaScript";
+        this.my_fun = function(){
+            return `Welcome to ${this.wish}`;
+        };
+    };
+    let obj1 = new class_one();
+    console.log( obj1.my_fun() );                   //Welcome to JavaScript
+</script>
+-->
+
+<!--
+<script>
+    function class_one(){
+        this.var_one = "Hello_1";
+        this.var_two = "Hello_2";
+        this.var_three = "Hello_3";
+
+        this.fun_one = function(){
+            return this.var_one;
+        };
+
+        this.fun_two = function(){
+            return this.var_two;
+        };
+
+        this.fun_three = function(){
+            return this.var_three;
+        };
+    };
+
+    let obj1 = new class_one();
+    console.log(
+        obj1.fun_one(),
+        obj1.fun_two(),
+        obj1.fun_three()
+    );                                  //Hello_1 Hello_2 Hello_3
+</script>
+-->
+
+
+<!--
+<script>
+    function class_one(arg1,arg2,arg3){
+        this.var_one = arg1;
+        this.var_two = arg2;
+        this.var_three = arg3;
+    };
+    let obj1 = new class_one("hello_1","hello_2","hello_3");
+    console.log( obj1.var_one, obj1.var_two, obj1.var_three );                      //hello_1 hello_2 hello_3
+
+    let obj2 = new class_one("welcome_1","welcome_2","welcome_3");
+    console.log( obj2.var_one, obj2.var_two, obj2.var_three );                      //welcome_1 welcome_2 welcome_3
+</script>
+-->
+
+
+<!--
+<script>
+    function class_one(){
+
+    };
+    class_one.prototype.var_one = "Hello_1";
+    let obj1 = new class_one();
+    console.log( obj1.var_one );                    //Hello_1
+</script>
+-->
+
+
+<!--
+<script>
+    function class_one(){
+
+    };
+    class_one.prototype.sub = "JavaScript";
+    class_one.prototype.fun_one = function(){
+        return "Hello";
+    };
+    let obj1 = new class_one();
+    console.log(
+        obj1.sub,
+        obj1.fun_one()
+    );                      //JavaScript Hello
+</script>
+-->
+
+<!--
+<script>
+    function class_one(){
+
+    };
+    class_one.prototype.var_one = "Hello_1";
+
+    function class_two(){
+
+    };
+    class_two.prototype = Object.create(class_one.prototype);
+    class_two.prototype.var_two = "Hello_2";
+
+    
+    let obj1 = new class_two();
+    console.log(
+        obj1.var_one,
+        obj1.var_two
+    );                          //Hello_1 Hello_2
+
+</script>
+-->
+
+
+<!--
+<script>
+    function class_one(){}
+    class_one.prototype.fun_one = function(){
+        return "Hello_1";
+    }
+
+    function class_two(){}
+    class_two.prototype = Object.create(class_one.prototype);
+    class_two.prototype.fun_two = function(){
+        return "Hello_2";
+    }
+
+    function class_three(){}
+    class_three.prototype = Object.create(class_two.prototype);
+    class_three.prototype.fun_three = function(){
+        return "Hello_3";
+    }
+
+    let obj1 = new class_one();
+    console.log( obj1.fun_one() );                              //Hello_1
+
+    let obj2 = new class_two();
+    console.log( obj2.fun_one(), obj2.fun_two() );              //Hello_1 Hello_2
+
+    let obj3 = new class_three();
+    console.log( obj3.fun_one(), obj3.fun_two(), obj3.fun_three() );    //Hello_1 Hello_2 Hello_3
+</script>
+-->
+
+
+
+<!--
+<script>
+    function class_one(){
+
+    };
+    class_one.prototype.dbFun = function(){
+        return "data from oracle db soon";
+    }; 
+
+    function class_two(){
+
+    };
+    class_two.prototype = Object.create(class_one.prototype);
+    class_two.prototype.dbFun = function(){
+        return "data from mongodb database soon...!";
+    }
+
+    let obj = new class_two();
+    console.log( obj.dbFun() );                     //data from mongodb database soon...!
+</script>
+-->
+
+<!--
+    Generators
+    **********
+        Generators "controls" the statements in functions.
+
+        Generators should have "*"
+
+        Each Statement should have "yield" statement
+
+        Genarators will return "cursor" mechanism.
+
+        by using "cursors" we can control statemenets
+-->
+
+
+
+<!--
+<script>
+    function *fun_one(){
+        yield "Stmt-1";
+        yield "Stmt-2";
+        yield "Stmt-3";
+        yield "Stmt-4";
+        yield "Stmt-5";
+    }
+    let cursor = fun_one();
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+</script>
+-->
+
+
+<!--
+<script>
+    function *fun_one(){
+        yield 100;
+        yield 200;
+        return 300;
+        yield 400;
+    }
+    let cursor = fun_one();
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+</script>
+-->
+
+
+<script>
+    function *fun_one(){
+        yield 100;
+        yield *fun_two();
+        yield *fun_three();
+        yield 400;
+    }
+    function *fun_two(){
+        yield 300;
+    }
+    function *fun_three(){
+        yield 200;
+    }
+    let cursor = fun_one();
+    for(let i=0;i<5;i++){
+        console.log(cursor.next());
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
