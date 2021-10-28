@@ -144,6 +144,56 @@ Ex.
 
 
 
+Optional Parameters in functions
+********************************
+
+    - while calling the functions we will make "few" parameters are optional.
+
+    - this concept introduced in "ES6"
+
+    - optional parameters we will represent with "?"
+
+    - optional parameters will work in "TypeScript".
+
+    - "superset" of "JavaScript" called as "TypeScript".
+
+    - we will save "TypeScript" files with ".ts" extension.
+
+    - TypeScript follows the "OOPS".
+
+    - TypeScript is "Programming" Language.
+
+    - Browsers won't understand TypeScript.
+
+    - So, we need to convert TypeScript to Equalent JavaScript.
+
+    - conversion from TypeScript to Equalent JavaScript called as "Transpilation".
+
+
+Installation of TypeScript
+**************************
+
+> npm install -g typescript
+
+npm stands for node packaging manager.
+
+-g stands for global Installation
+
+
+
+Transpilation
+*************
+
+> tsc example.ts
+
+       o/p
+
+  example.js
+
+
+> node example.js
+
+
 
 
 
