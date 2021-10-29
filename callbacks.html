@@ -1,0 +1,107 @@
+<!--
+<script>
+    function fun_one(arg1){
+        console.log(arg1)
+        console.log( arg1() );
+    }
+    function fun_two(){
+        return "welcome to callbacks";
+    }
+    fun_one( fun_two );
+</script>
+-->
+
+
+<!--
+<script>
+    function fun_one(arg1,arg2,arg3){
+        console.log( arg1(), arg2(), arg3() );
+    };
+    fun_one( function fun_two(){
+        return "Hello_1";
+    }, function fun_three(){
+        return "Hello_2";
+    }, function fun_four(){
+        return "Hello_3";
+    } );                                //Hello_1 Hello_2 Hello_3
+</script>
+-->
+
+
+<!--
+<script>
+   function fun_one(arg1){
+        return arg1("Hello_1");
+   };
+
+   fun_one( function fun_two(arg1){
+       console.log(arg1);
+   } );                                     //Hello_1
+</script>
+-->
+
+<!--
+<script>
+    function fun_one(arg1,arg2,arg3){
+        return arg1("Hello_1")+"......."+arg2("Hello_2")+"....."+arg3("Hello_3");
+    }
+
+    fun_one(function fun_two(arg1){
+        console.log(arg1);                          //Hello_1
+    }, function fun_three(arg1){
+        console.log(arg1);                          //Hello_2
+    }, function fun_four(arg1){
+        console.log(arg1);                          //Hello_3
+    });
+</script>
+-->
+
+
+<!--
+<script>
+    function fun_one(arg1){
+        return arg1( fun_three );
+    };
+    function fun_two(arg2){
+        return arg2("Hello");
+    };
+    function fun_three(arg3){
+        console.log(arg3);
+    }
+    fun_one( fun_two );                         //Hello
+</script>
+-->
+
+<script>
+   function calc(num,add){
+        return add(num+5,false);
+   };
+   function addition(addRes,error){
+        if(!error){
+            console.log(addRes);                   
+        }
+   };
+  
+   calc(5, addition);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
