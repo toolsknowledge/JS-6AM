@@ -2,19 +2,15 @@
 *******
 
 1) variables
-
        
    
 2) functions
 
 
-
 3) Arrays
 
 
-
 4) JSON
-
      
 
 5) Promises
