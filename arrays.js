@@ -163,6 +163,7 @@
     );              //[ { '0': 1 }, { '1': 2 }, { '2': 3 }, { '3': 4 }, { '4': 5 } ]
 */
 
+/*
 
 //filter()
 console.log(
@@ -173,19 +174,117 @@ console.log(
     })
 );                  //[ 300, 400, 500 ]
 
+*/
 
+/*
+    console.log(
+        [{"e_id":111,"e_name":"e_one","e_sal":10000},
+        {"e_id":222,"e_name":"e_two","e_sal":20000},
+        {"e_id":333,"e_name":"e_three","e_sal":30000},
+        {"e_id":444,"e_name":"e_four","e_sal":40000},
+        {"e_id":555,"e_name":"e_five","e_sal":50000}].filter((element,index)=>{
+            return element.e_sal>=30000;
+        }).map((element,index)=>{
+            return element.e_name === "e_three" ? {"e_id":333,"e_name":"employee_three","e_sal":30000} : element;
+        })
+    )
+*/
+
+
+/*
+    //reduce()
+    console.log(
+        [1,2,3,4,5].reduce((firstElement,accumlator)=>{
+            return firstElement+accumlator;
+        })
+    );              //15
+
+
+    console.log(
+        [100,200,300,400,500].reduce((firstElement,accumlator)=>{
+            return firstElement+accumlator;
+        })
+    );                  //1500
+
+*/
+
+/*
+    console.log(
+        [1,2,3,4,5].map((element,index)=>{
+            return element*100;
+        }).filter((element,index)=>{
+            return element>=100;
+        }).reduce((firstElement,accumlator)=>{
+            return firstElement+accumlator;
+        })
+    );              //1500
+*/
+
+
+/*
+    console.log(
+        ["javascript","to","welcome"].reduceRight((firstElement,accumlator)=>{
+            return firstElement+" "+accumlator;
+        })  
+    );              //welcome to javascript
+*/
+
+
+/*
+    let arr1 = [10,20,30,40,50,60,70,80,90,100];
+    console.log(arr1.slice(4,6));           //[ 50, 60 ]
+    console.log(arr1.slice(7,9));           //[ 80, 90 ]
+    console.log(arr1.slice(0,1));           //[ 10 ]
+    console.log(arr1.slice(9,10));          //[ 100 ]
+    console.log(arr1.slice(1,4));           //[ 20, 30, 40 ]
+    console.log(arr1.slice(-4,-1));         //[ 70, 80, 90 ]
+*/
+
+
+/*
+    console.log(
+        [[1],[2],[3]].flat(1)
+    );              //[ 1, 2, 3 ]
+
+    console.log(
+        [[[[[[[[[[1]]]]]]]]],[[[[[[[[[2]]]]]]]]],[[[[[[[[[[3]]]]]]]]]]].flat(Infinity)
+    );              //[ 1, 2, 3 ]
+*/
+
+
+
+let arr1 = [1,2,3];
+let arr2 = ["one","two","three"];
+//[[1,"one"],[2,"two"],[3,"three"]]
 
 console.log(
-    [{"e_id":111,"e_name":"e_one","e_sal":10000},
-     {"e_id":222,"e_name":"e_two","e_sal":20000},
-     {"e_id":333,"e_name":"e_three","e_sal":30000},
-     {"e_id":444,"e_name":"e_four","e_sal":40000},
-     {"e_id":555,"e_name":"e_five","e_sal":50000}].filter((element,index)=>{
-        return element.e_sal>=30000;
-     }).map((element,index)=>{
-        return element.e_name === "e_three" ? {"e_id":333,"e_name":"employee_three","e_sal":30000} : element;
-     })
-)
+   arr1.map((element,index)=>{
+       return [element,arr2[index]];
+   }).flat(Infinity)
+);         
+
+//[ [ 1, 'one' ], [ 2, 'two' ], [ 3, 'three' ] ]
+//[ 1, 'one', 2, 'two', 3, 'three' ]
+
+console.log(
+    arr1.flatMap((element,index)=>{
+        return [element,arr2[index]];
+    })
+ );             //[ 1, 'one', 2, 'two', 3, 'three' ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
