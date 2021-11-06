@@ -252,7 +252,7 @@ console.log(
 */
 
 
-
+/*
 let arr1 = [1,2,3];
 let arr2 = ["one","two","three"];
 //[[1,"one"],[2,"two"],[3,"three"]]
@@ -271,10 +271,107 @@ console.log(
         return [element,arr2[index]];
     })
  );             //[ 1, 'one', 2, 'two', 3, 'three' ]
+*/
+
+
+/*
+    //findIndex()
+    console.log(
+        [1,2,3,4,5,6].findIndex((element,index)=>{
+            return element == 6;
+        })
+    );                  //5
+
+
+    console.log(
+        [10,20,30,40,50,60,70,80,90,100].findIndex((element,index)=>{
+            return element == 5;
+        })
+    );              //-1
+
+    let arr1 = [10,20,30,40,50];
+    arr1.splice(arr1.findIndex((element,index)=>{
+        return element == 30;
+    }),1);
+    console.log(arr1);              //[ 10, 20, 40, 50 ]
 
 
 
+    let arr2 = [10,100,1000,10000,20,200,2000,20000];
+    arr2.splice(arr2.findIndex((element,index)=>{
+        return element == 20;
+    }),1);
+    console.log(arr2);
 
+
+    let arr3 = [{"e_id":111,"e_name":"e_one","e_sal":10000},
+                {"e_id":222,"e_name":"e_two","e_sal":20000},
+                {"e_id":333,"e_name":"e_three","e_sal":30000},
+                {"e_id":444,"e_name":"e_four","e_sal":40000},
+                {"e_id":555,"e_name":"e_five","e_sal":50000}];
+    arr3.splice(arr3.findIndex((element,index)=>{
+        return element.e_id == 333
+    }),1);
+    console.log(arr3);
+*/
+
+/*
+    console.log(
+        [1,2,3,4,5].some((element,index)=>{
+            return element<=1;
+        })
+    );
+*/
+
+
+/*
+    console.log(
+        [1,2,3,4,5].every((element,index)=>{
+            return element<=5;
+        })
+    );      //true
+*/
+
+
+
+// console.log(
+//     [1,2,3,4,5].find((element,index)=>{
+//         return element == 40;
+//     })
+// );
+
+
+
+// let arr1 = [1,2,3,4,5];
+// console.log( arr1.fill(100) );                  //[ 100, 100, 100, 100, 100 ]
+// console.log( arr1.fill(200,1) );                //[ 100, 200, 200, 200, 200 ]
+// console.log( arr1.fill(300,2) );                //[ 100, 200, 300, 300, 300 ]
+// console.log( arr1.fill(400,3) );                //[ 100, 200, 300, 400, 400 ]
+// console.log( arr1.fill(500,4) );                //[ 100, 200, 300, 400, 500 ]
+// console.log( arr1.fill(600,1,3) );              //[ 100, 600, 600, 400, 500 ]
+
+
+//indexOf()
+let arr1 = [10,20,30,10,40,10,20,50];
+arr1.forEach((element,index)=>{
+    console.log( arr1.indexOf(element) , index );
+    console.log("------------------------");
+});
+
+
+let arr2 = [10,20,30,10,20,30];
+arr2.forEach((element,index)=>{
+    console.log( arr2.indexOf(element), index );
+});
+
+
+let arr3 = [100,200,300,100,200,300];
+
+console.log(
+    arr3.filter((element,index)=>{
+        return arr3.indexOf(element) == index;
+    })
+);              //[ 100, 200, 300 ]
 
 
 
