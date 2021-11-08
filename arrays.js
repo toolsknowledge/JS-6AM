@@ -351,108 +351,153 @@ console.log(
 // console.log( arr1.fill(600,1,3) );              //[ 100, 600, 600, 400, 500 ]
 
 
-//indexOf()
-let arr1 = [10,20,30,10,40,10,20,50];
-arr1.forEach((element,index)=>{
-    console.log( arr1.indexOf(element) , index );
-    console.log("------------------------");
+/*
+    //indexOf()
+    let arr1 = [10,20,30,10,40,10,20,50];
+    arr1.forEach((element,index)=>{
+        console.log( arr1.indexOf(element) , index );
+        console.log("------------------------");
+    });
+
+
+    let arr2 = [10,20,30,10,20,30];
+    arr2.forEach((element,index)=>{
+        console.log( arr2.indexOf(element), index );
+    });
+
+
+    let arr3 = [100,200,300,100,200,300];
+
+    console.log(
+        arr3.filter((element,index)=>{
+            return arr3.indexOf(element) == index;
+        })
+    );              //[ 100, 200, 300 ]
+*/
+
+
+
+/*
+    //copyWithin
+    let arr1 = [10,20,30,40,50,60,70,80,90,100];
+    arr1.copyWithin(5);
+    console.log(arr1);          //[10,20,30,40,50,10,20,30,40,50]
+
+
+    let arr2 = [10,20,30,40,50,60,70,80,90,100];
+    arr2.copyWithin(3);
+    console.log(arr2);              //[10,20,30,10,20,30,40,50,60,70]
+
+
+    let arr3 = [10,20,30,40,50,60,70,80,90,100];
+    arr3.copyWithin(7);
+    console.log(arr3);                  //[10,20,30,40,50,60,70,10,20,30]
+
+
+
+    let arr4 = [10,20,30,40,50,60,70,80,90,100];
+    arr4.copyWithin(-7);
+    console.log(arr4);                  //[10,20,30,10,20,30,40,50,60,70]
+
+
+    let arr5 = [10,20,30,40,50,60,70,80,90,100];
+    arr5.copyWithin(2,7);
+    console.log(arr5);              // [10,20,80,90,100,60,70,80,90,100]
+
+
+    let arr6 = [10,20,30,40,50,60,70,80,90,100];
+    arr6.copyWithin(-4,-7);
+    console.log(arr6);              //[10,20,30,40,50,60,40,50,60,70]
+
+
+
+    let arr7 = [10,20,30,40,50,60,70,80,90,100];
+    arr7.copyWithin(2,4,7);
+    console.log(arr7);              //10, 20, 50, 60,  70,60, 70, 80, 90, 100]
+*/
+
+
+/*
+    //sort()
+    console.log(
+        [1,5,2,4,3].sort((arg1,arg2)=>{
+            return arg1-arg2;
+        })
+    );              //[ 1, 2, 3, 4, 5 ]
+
+
+    console.log(
+        [1,5,2,4,3].sort((arg1,arg2)=>{
+            return arg2-arg1;
+        })
+    );          //[ 5, 4, 3, 2, 1 ]
+
+
+    console.log(
+        [10,50,20,40,30].sort((arg1,arg2)=>{
+            return arg1-arg2;
+        })[1]
+    );              //20
+
+
+    console.log(
+        [10,50,20,40,30].sort((arg1,arg2)=>{
+            return arg2-arg1;
+        })[1]
+    );          //40
+*/
+
+
+//forEach()
+[1,2,3,4,5].forEach((element,index)=>{
+    console.log(element, index);
 });
 
 
-let arr2 = [10,20,30,10,20,30];
-arr2.forEach((element,index)=>{
-    console.log( arr2.indexOf(element), index );
-});
+//for....of loop
+for(let x of [100,200,300,400,500]){
+    console.log(x);
+}
+
+let obj = {"key1":"value1","key2":"value2","key3":"value3"}
+for(let x in obj){
+    console.log(obj[x]);
+}
 
 
-let arr3 = [100,200,300,100,200,300];
+//reverse()
+//to reverse the "array".
+console.log(
+    [1,2,3,4,5].reverse()
+);                  //[ 5, 4, 3, 2, 1 ]
+
+
 
 console.log(
-    arr3.filter((element,index)=>{
-        return arr3.indexOf(element) == index;
-    })
-);              //[ 100, 200, 300 ]
+    ["Angular","AngularJS","Angular13"].reverse()
+);          //[ 'Angular13', 'AngularJS', 'Angular' ]
 
 
+console.log(
+    Array.from("Hello").reverse().toString().replace(/,/g,"")
+);
 
+//TypeError: "Hello".reverse is not a function
 
+//[ 'H', 'e', 'l', 'l', 'o' ]
 
+//[ 'o', 'l', 'l', 'e', 'H' ]   ===> "olleh"
 
+//o,l,l,e,H
 
+//ol,l,e,H
 
+//olleH
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(
+    Array.from("welcome").reverse().join("")   
+);
 
 
