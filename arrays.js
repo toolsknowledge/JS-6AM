@@ -496,8 +496,189 @@ console.log(
 
 
 
+// console.log(
+//     Array.from("welcome").reverse().join("")   
+// );
+
+
+// console.log(
+//     "welcome to ES6".substr(0,7)
+// );      //welcome
+
+// console.log(
+//     "welcome to ES6".substr(8,2)
+// );      //to
+
+// console.log(
+//     "welcome to ES6".substr(11,3)
+// );      //ES6
+
+
 console.log(
-    Array.from("welcome").reverse().join("")   
+    [1,2,3,4,5].find((element,index)=>{
+        return element == 10;
+    })
+);          //1
+
+
+// console.log(
+//     [1,2,3,4,5].includes(1)
+// );          //true
+
+
+// console.log( " welcome ".length );              //9
+// console.log( " welcome ".trim().length );       //7
+// console.log( " welcome ".trimStart().length );  //8
+// console.log( " welcome ".trimEnd().length );    //8
+
+
+
+// console.log(
+//     "Hello".padStart(10,"*").padEnd(15,"*")
+// );      //*****Hello*****
+
+
+/*
+    console.log(
+        [1,2,3,1,4,5,1].lastIndexOf(1)
+    );
+    //6
+*/
+
+
+/*
+    console.log(
+        "Hello".repeat(5)
+    );          //HelloHelloHelloHelloHello
+*/
+
+
+console.log(
+    "welcome to es6".split(" ")
+);                  //[ 'welcome', 'to', 'es6' ]
+
+
+console.log(
+    //"welcome*to$es6@ashokit".replace("*"," ").replace("$"," ").replace("@"," ")
+    "welcome*to?es6".replace("[^\w\*\g]"," ")
 );
+
+//["welcome","to","es6","ashokit"]
+
+
+
+let arr1 = ["Hello_1","Hello_2","Hello_3"];
+
+//["Hello_3","Hello_2","Hello_1"]      ------ Ex1
+
+//["1_olleH","2_olleH","3_olleH""]     ------ Ex2
+
+//["3_olleH"","2_olleH","1_olleH"]     ------ Ex3
+
+
+
+let arr2 = [1,2,3,4,5,6];
+
+
+//[4,5,6,1,2,3]         //Ex1
+
+//[15,6]                //Ex2
+
+
+console.log(
+    "welcome".substring(0,3)
+);
+
+console.log(
+    "welcome".substring(3,7)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
