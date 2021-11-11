@@ -194,6 +194,178 @@
 
 
 
+/*
+    let promise1 = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("Hello_1");
+        },0);
+    });
+
+    let promise2 = new Promise((resolve,reject)=>{
+        resolve("Hello_2");
+    });
+
+    promise1.then((posRes)=>{
+        console.log(posRes);
+    },(errRes)=>{
+        console.log(errRes);
+    });
+
+    promise2.then((posRes)=>{
+        console.log(posRes);
+    },(errRes)=>{
+        console.log(errRes);
+    });
+*/
+
+
+
+/*
+    let promise1 = new Promise((resolve,reject)=>{
+        resolve("Hello");
+    });
+
+    async function my_fun(){
+        let result = await promise1;
+        console.log(result);
+    };
+
+    my_fun();                   //Hello
+*/
+
+/*
+    let add = (num,callback)=>{
+        return callback(num+5, false);
+    };
+
+    let sub = (num,callback)=>{
+        return callback(num-3, false);
+    };
+
+    let mul = (num,callback)=>{
+        return callback(num*2, false);
+    };
+
+    let div = (num,callback)=>{
+        return callback(num/2+3,false);
+    };
+
+    add(5, (addRes,error)=>{
+        if(!error){
+            sub(addRes,(subRes,error)=>{
+                if(!error){
+                    mul(subRes,(mulRes,error)=>{
+                        if(!error){
+                            div(mulRes,(divRes,error)=>{
+                                if(!error){
+                                    console.log(divRes);
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+        }
+    });
+*/
+
+
+let add = (num)=>{
+    return new Promise((resolve,reject)=>{
+        resolve(num+5);
+    });
+};
+
+let sub = (num)=>{
+    return new Promise((resolve,reject)=>{
+        resolve(num-3);
+    });
+};
+
+
+let mul = (num)=>{
+    return new Promise((resolve,reject)=>{
+        resolve(num*2);
+    });
+};
+
+
+let div = (num)=>{
+    return new Promise((resolve,reject)=>{
+        resolve(num/2+3);
+    });
+};
+
+
+
+// add(5).then((posRes)=>{
+//     sub(posRes).then((posRes)=>{
+//         mul(posRes).then((posRes)=>{
+//             div(posRes).then((posRes)=>{
+//                 console.log(posRes);
+//             },(errRes)=>{
+
+//             })
+//         },(errRes)=>{
+
+//         })
+//     },(errRes)=>{
+
+//     })
+// },(errRes)=>{
+
+// })
+
+// async function calc(){
+//     let addRes = await add(5);
+//     let subRes = await sub(addRes);
+//     let mulRes = await mul(subRes);
+//     let divRes = await div(mulRes);
+//     console.log(addRes, subRes, mulRes, divRes );
+// };
+
+// calc();
+
+
+(async ()=>{
+    let addRes = await add(5);
+    let subRes = await sub(addRes);
+    let mulRes = await mul(subRes);
+    let divRes = await div(mulRes);
+    console.log(addRes, subRes, mulRes, divRes );
+})()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
