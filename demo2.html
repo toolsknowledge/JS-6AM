@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body></body>
+
+    <script>
+        const div = document.createElement("div");
+
+        const span = document.createElement("span");
+        
+        const strong = document.createElement("strong");
+        strong.innerText = "Hello";
+        span.append(strong);
+        div.append(span);
+
+        const body = document.body;
+        body.append(div);
+    </script>
+</html>

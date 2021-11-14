@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div>
+            <span id="sp1" title="hello">Span1</span>
+            <span id="sp2">Span2</span>
+        </div>
+    </body>
+    <script>
+        const div = document.querySelector("div");
+        const span1 = document.querySelector("#sp1");
+        const span2 = document.querySelector("#sp2");
+       
+        //remove
+        //1st solution
+        //span1.remove();
+
+
+        //2nd solution
+        //div.removeChild(span2);
+
+
+        //attributes
+        //read attributes
+        //sol-1
+        //console.log( span1.id, span1.title );
+        //sol-2
+        //console.log( span1.getAttribute("id"), span1.getAttribute("title") );
+
+
+        //add the attributes
+        //sol-1
+        //span1.setAttribute("key1","value1");
+        //span1.setAttribute("key2","value2");
+
+        
+
+        //remove
+        span1.removeAttribute("id");
+        span1.removeAttribute("title");
+        span2.removeAttribute("id");
+
+
+
+
+
+
+
+    </script>
+</html>

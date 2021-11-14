@@ -51,6 +51,12 @@
 14) Closures
 
 
+
+15) async & defer
+
+
+16) classes
+
 Introduction
 ************
         - JavaScript is the Scripting Language.

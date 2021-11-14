@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <style>
+           .gparent{
+               width: 500px;
+               height: 500px;
+               background-color: red;
+           }
+
+           .parent{
+               width: 480px;
+               height: 200px;
+               margin: 20px 10px;
+               background-color: khaki;
+               display: flex;
+            }
+
+           .child{
+               width: 100px;
+               height: 100px;
+               margin: 20px;
+               background-color: lightcoral;
+               
+           }
+       </style>
+    </head>
+    <body>
+       <div class="gparent" id="grand-parent">    <!-- getElementById()-->
+            <div class="parent" id="parent1">     <!-- 1) use (class) use (querySelectorAll())-->
+                <div class="child" id="c1"></div>
+                <div class="child" id="c2"></div>
+            </div>
+            <div class="parent" id="parent2">
+                <div class="child" id="c3"></div>
+                <div class="child" id="c4"></div>
+            </div>
+       </div>
+    </body>
+    <script>
+        //getElementById()
+
+        //querySelector()
+
+        //querySelectorAll()
+
+        //children
+
+        //parentNode
+
+        //nextElementSibling
+
+        //previousElementSibling
+
+        //closet
+
+        document.getElementById("grand-parent").style.backgroundColor = "green";
+
+       const p1 = document.querySelectorAll(".parent")[0];
+       p1.style.backgroundColor = "red";
+       const childrens = p1.children;
+       const c1 = childrens[0];
+       c1.style.backgroundColor = "grey";
+       c1.nextElementSibling.style.backgroundColor = "yellow";
+
+
+    const p2 = document.querySelector("#parent2");
+    const c4 = p2.querySelector("#c4");
+    c4.previousElementSibling.style.backgroundColor = "red";
+
+    c4.closest("#parent2").style.backgroundColor = "pink";
+
+      
+    c4.previousElementSibling.closest(".gparent").style.backgroundColor = "yellow";
+
+
+
+    </script>
+</html>
