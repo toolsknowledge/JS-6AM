@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <fieldset>
+            <legend>Login</legend>
+            <input type="text" id="uname" placeholder="Enter User Name">
+            <br><br>
+            <input type="password" id="upwd" placeholder="Enter Password">
+            <br><br>
+            <!-- <button onclick="login()">Login</button> -->
+            <!-- <button ondblclick="login1()">Login1</button> -->
+            <button onkeydown="fun_one()">Login</button>
+
+
+            <h1 id="status"></h1>
+        </fieldset>
+    </body>
+    <script>
+
+        function fun_one(){
+            console.log("Hello");
+        }
+
+
+        // function login(){
+        //    (document.getElementById("uname").value == "ashokit" && document.getElementById("upwd").value == "ashokit")?document.getElementById("status").innerHTML = "Login Success":document.getElementById("status").innerHTML = "Login Fail"
+        // }
+
+        function login1(){
+           (document.getElementById("uname").value == "ashokit" && document.getElementById("upwd").value == "ashokit")?document.getElementById("status").innerHTML = "Login Success":document.getElementById("status").innerHTML = "Login Fail"
+        }
+    </script>
+</html>

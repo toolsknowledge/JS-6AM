@@ -1,0 +1,100 @@
+<!--
+    Event Bubbling & Event Capturing
+    ********************************
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Capturing</title>
+        <style>
+            .parent{
+                width: 400px;
+                height: 400px;
+                background-color: red;
+                color: white;
+            }
+            .child{
+                width: 300px;
+                height: 300px;
+                background-color: green;
+                margin-left: 50px;
+                margin-top: 25px;
+            }
+            .subchild{
+                width: 200px;
+                height: 200px;
+                background-color: yellow;
+                margin-left: 50px;
+                margin-top: 25px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="parent">
+            parent
+            <div class="child">
+                child
+                <div class="subchild">
+                    subchild
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+    <script>
+
+
+/*
+        //event bubbling
+         document.querySelector(".subchild").addEventListener("click",()=>{
+            console.log("subchild");
+         });
+
+         document.querySelector(".child").addEventListener("click",(event)=>{
+            event.stopPropagation();
+            console.log("child");
+         });
+
+         document.querySelector(".parent").addEventListener("click",()=>{
+            console.log("parent");
+         });
+
+         //subchild ==>  subchild child parent          
+         //child ==> child parent
+         //parent ==> parent
+
+
+         //event.stopPropagation()
+
+*/
+
+       /* event capturinh*/  
+         document.querySelector(".parent").addEventListener("click",()=>{
+             console.log("parent")
+         },true);
+
+         document.querySelector(".child").addEventListener("click",()=>{
+             console.log("child");
+         },true);
+
+         document.querySelector(".subchild").addEventListener("click",()=>{
+            console.log("subchild");
+         });
+
+         //parent --- parent
+
+         //child  ---   parent
+                        //child
+
+
+         //subchild ----      parent
+                            //child
+                            //subchild
+
+    </script>
+
+
+
+</html>
