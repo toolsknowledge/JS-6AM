@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Debouncing</title>
+    </head>
+
+    <body>
+        <button id="my_btn">Click Me</button>
+    </body>
+
+
+    <script>
+
+        const debounce = (fn,delay)=>{
+            let timer;
+            return function(...args){
+                if(timer){
+                    clearTimeout(timer);
+                }
+                timer = setTimeout(()=>{
+                    fn(...args);
+                },delay);
+            }
+        }
+
+
+
+        document.getElementById("my_btn").addEventListener("click",debounce(event=>{
+            console.log("Debouncing");
+        }, 5000));
+    </script>
+</html>
