@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Throtting</title>
+        <title>Throttling</title>
     </head>
     <body>
         <button id="my_btn">Click Me</button>
@@ -10,12 +10,64 @@
 
         const throttle = (fn,delay)=>{
             let last = 0;
-            return function(...args){
-                
+            return (...args)=>{
                 let now = new Date().getTime();
-                
                 if(now-last<delay){
-                    console.log(now-last<delay);    
+                    return;
+                }
+                last=now;
+                return fn(...args);
+            };
+        };
+
+
+
+        document.getElementById("my_btn").addEventListener("click",throttle((event)=>{
+            console.log("click me")
+        },5000));
+    </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>Throttling</title>
+    </head>
+    <body>
+        <button id="my_btn">Click Me</button>
+    </body>
+    <script>
+
+        const throttle = (fn,delay)=>{
+            let last = 0;
+            return (...args)=>{
+                let now = new Date().getTime();
+                if(now-last<delay){
                     return;
                 }
                 last = now;
@@ -24,8 +76,8 @@
         };
 
 
-        document.getElementById("my_btn").addEventListener("click",throttle((event)=>{
-            console.log("Hello......");
-        }),5000);
+        document.getElementById("my_btn").addEventListener("click",throttle((e)=>{
+            console.log("click me");
+        },5000));
     </script>
-</html>
+</html> -->
