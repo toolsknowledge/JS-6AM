@@ -1,0 +1,437 @@
+<!--
+<script>
+    let obj = {};
+
+    let key1 = {};
+    let value1 = "Hello_1";
+    obj[key1] = value1;
+
+
+    let key2 = {};
+    let value2 = "Hello_2";
+    obj[key2] = value2;
+
+    console.log(obj);               //{[object Object]: 'Hello_2'}
+</script>
+-->
+
+
+<!--
+    1) in json objects, if we use "json objects as keys" automatically overriding will be happening.
+
+    2) to overcome above issue, netscape released the data structures.
+
+        => Map
+
+        => WeakMap
+
+        => Set
+
+        => WeakSet
+-->
+
+<!--
+<script>
+    let map = new Map();
+
+    let key1 = {};
+    let value1 = "Hello_1";
+    map.set(key1,value1);
+
+    let key2 = {};
+    let value2 = "Hello_2";
+    map.set(key2,value2);
+
+    console.log(map);                       //{{…} => 'Hello_1', {…} => 'Hello_2'}
+</script>
+-->
+
+
+<!--
+<script>
+    let map = new Map();
+    console.dir(map);
+
+    //clear()
+    //Map()
+    //delete()
+    //entries() , forEach(), for...of()
+    //get()
+    //has()
+    //keys()
+    //set()
+    //size
+    //values()
+</script>
+-->
+
+
+<!--
+<script>
+    let map = new Map();    
+    map.set("key1","Hello_1").set("key2","Hello_2").set("key3","Hello_3").set("key4","Hello_4").set("key5","Hello_5")
+    console.log(map);
+    console.log(map.size);
+    console.log([...map.keys()]);               //['key1', 'key2', 'key3', 'key4', 'key5']
+    console.log( [...map.values()] );           //['Hello_1', 'Hello_2', 'Hello_3', 'Hello_4', 'Hello_5']
+    map.delete("key5");
+    console.log(map);
+    console.log( map.has("key5") );             //false
+    for(let [k,v] of map){
+        console.log(k,v);
+    }
+    console.log( map.get("key1") );             //Hello_1
+    map.clear();
+    console.log(map);
+</script>
+-->
+
+
+<!--
+<script>
+    let map = new Map();
+    map.set("key1","Hello_1");
+    map.set("key2","Hello_2");
+    map.set("key1","Hello_3");
+    map.set("key2","Hello_4");
+    console.log(map);               //{'key1' => 'Hello_3', 'key2' => 'Hello_4'}
+</script>
+-->
+
+<!--
+<script>
+    let map = new Map();
+    map.set("key1","Hello_1");
+    console.log( [...map] );                //['key1', 'Hello_1']
+</script>
+-->
+
+
+
+<!--
+<script>
+    let map = new Map();
+    map.set("key1","Hello_1");
+    map.set(100,100);
+    map.set(true,true);
+    map.set(1n,100n);
+    map.set(undefined,undefined);
+    map.set(null,null);
+    map.set([],[]);
+    map.set({},{});
+    console.log(map);
+</script>
+-->
+
+
+<!--
+<script>
+    {
+        let x = "key1";
+
+        var map = new WeakMap();    
+        map.set(x,"Welcome");
+    }
+    console.log(map);
+</script>
+-->
+
+
+<!--
+<script>
+    let weakMap = new WeakMap();
+    weakMap.set({},"Hello_1");
+</script>
+-->
+
+<!--
+<script>
+    let set = new Set();
+    console.dir(set);
+
+    //add()
+    //clear()
+    //Set()
+    //delete()
+    //entries(),forEach(),for...of()
+    //has()
+    //values()
+    //size
+</script>
+-->
+<!--
+<script>
+    let set = new Set();
+    set.add(10);
+    set.add(20);
+    set.add(30);
+    set.add(10);
+    set.add(20);
+    set.add(30);
+    console.log(set);
+    console.log(set.keys());
+    console.log(set.values());
+    console.log(set.has(10));
+    console.log(set.has(100));
+    for(let v of set){
+        console.log(v);
+    }
+    set.delete(10);
+    console.log(set);
+    set.clear();
+    console.log(set);
+    console.log(set.size);
+</script>
+-->
+
+
+<!--
+<script>
+   let arr = [10,20,30,10,20,30];
+   let s1 = new Set(arr);
+   let arr1 = [...s1];
+   console.log(arr1);                   //[10, 20, 30]
+</script>
+-->
+
+<!--
+<script>
+    let set = new Set();
+    set.add("Hello");
+    set.add(100);
+    set.add(true);
+    set.add(undefined);
+    set.add(null);
+    set.add(100n);
+    set.add([]);
+    set.add({});
+    console.log(set);
+</script>
+-->
+
+<!--
+<script>
+    let weakSet = new WeakSet();
+    weakSet.add({});
+</script>
+-->
+
+<script>
+    {
+        let x = {};
+        var set = new WeakSet();
+        set.add(x);
+    }
+    console.log(set);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
