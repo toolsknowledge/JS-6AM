@@ -1,0 +1,198 @@
+<!--
+    closures
+    ********
+        the function with it's lexical scope called as closure.
+-->
+
+<!--
+<script>
+    function fun_one(){
+        let x = 100;
+
+        function fun_two(){
+            console.log(x);
+        };
+
+        fun_two();
+    };
+
+    fun_one();
+</script>
+-->
+
+<!--
+<script>
+    function fun_one(){
+        var x = 100;
+
+        function fun_two(){
+            var y = 200;
+
+            function fun_three(){
+                console.log(x);
+                console.log(y);
+            };
+            fun_three();
+        }
+        fun_two();
+    }
+    fun_one();
+</script>
+-->
+
+
+
+<!--
+<script>
+    function fun_one(){
+        var x = 100;
+    
+        return function fun_two(){
+            console.log(x);
+        }
+    
+    };
+
+    var fun_two = fun_one();
+    fun_two();                              //100
+  
+
+
+</script>
+-->
+
+
+
+<!--
+<script>
+    function grandparent(){
+        var land = "100acres";
+        var money = "1cr";
+
+        var x = function parent(){
+            console.log("Hello....",land);
+
+            var y = function child(){
+                console.log(money);
+            };
+
+            return y;
+        };
+
+        return x;
+    };
+
+
+    var parent = grandparent();
+
+    var child = parent()
+
+
+    parent();
+
+    child()
+
+
+
+
+
+</script>
+-->
+<!--
+<script>
+    function fun_one(){
+       var x = 100;
+       setTimeout(function(){
+           console.log(x);
+       },5000);
+    };
+    fun_one();
+</script>
+-->
+
+<script>
+    for(var i=1;i<=5;i++){
+        ((i)=>{
+            setTimeout(function(){
+                console.log(i);
+            },i*1000);
+        })(i)
+        console.log("Hello");
+    }
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
