@@ -1,0 +1,93 @@
+<script>
+    let str = "aaabbbaaabbb";
+
+    let arr = [1,5,2,4,3];
+</script>
+
+
+
+<!--
+    function with it's lexical scope called as "closure".
+-->
+
+
+<!--
+<script>
+    function fun_one(){
+        var x = 100;
+
+        function fun_two(){
+            var y = 200;
+            console.log(x);
+
+            function fun_three(){
+                console.log(y);
+            }
+
+            return fun_three;
+        }
+        return fun_two;
+    }
+
+    let fun_two = fun_one();
+    let fun_three = fun_two();
+
+    fun_three();
+</script>
+-->
+
+
+
+<!--
+<script>
+    function fun_one(){
+       var x = 100;
+       setTimeout(()=>{
+            function fun_two(){
+                console.log(x);
+            }
+            fun_two();
+       },5000);
+       x = 500;
+    };
+    fun_one();                      //500
+</script>
+-->
+
+<script>
+    for(let i=0;i<5;i++){
+        // ((i)=>{
+            setTimeout(()=>{
+                console.log(i);
+            },5000)
+        // })(i)
+    }
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
